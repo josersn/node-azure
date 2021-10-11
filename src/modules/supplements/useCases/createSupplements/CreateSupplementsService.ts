@@ -1,14 +1,15 @@
+import { Supplement } from "../../model/Supplement";
 import { ISupplementsRepository } from "../../repositories/ISupplementsRepository";
 
 class CreateSupplementsService {
 
     constructor(private repository: ISupplementsRepository) { }
 
-    async execute() {
+    async execute(name: string): Promise<Supplement> {
 
-        // const supplement = this.repository.create("José");
+        const supplement = this.repository.create(name);
 
-        return { ok: true };
+        return supplement;
     };
 
 }

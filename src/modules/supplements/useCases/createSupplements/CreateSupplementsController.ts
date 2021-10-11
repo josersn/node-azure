@@ -11,9 +11,9 @@ class CreateSupplementsController {
         const repository = new SupplementsRepository();
         const service = new CreateSupplementsService(repository);
 
-        const result = await service.execute();
+        const supplement = await service.execute(name);
 
-        return res.json({ body: name });
+        return res.json(supplement);
     }
 }
 
