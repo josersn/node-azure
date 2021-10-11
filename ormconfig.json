@@ -1,0 +1,13 @@
+{
+    "type": "postgres",
+    "port": 5432,
+    "host": "wind-database.postgres.database.azure.com", 
+    "username": "azure@wind-database",
+    "password": "Wind@2021",
+    "database": "wind", 
+    "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
+    "entities": ["./src/modules/**/infra/typeorm/entities/*.ts"],
+    "cli": {
+      "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    }
+  }
