@@ -2,7 +2,6 @@ import "reflect-metadata";
 import express from "express";
 import { supplementsRoutes } from "./routes/supplements.routes";
 
-import "./shared/container";
 import "./database";
 
 const server = express();
