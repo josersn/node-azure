@@ -21,6 +21,12 @@ class SupplementsRepository implements ISupplementsRepository {
 
         return supplement;
     }
+
+    async listSupplements() : Promise<Supplement[]> {
+        const supplements = this.repository.find();
+
+        return supplements;
+    }
 }
 
 export { SupplementsRepository }

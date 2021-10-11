@@ -6,6 +6,7 @@ interface ISupplementsRepositoryDTO {
 
 interface ISupplementsRepository {
     create(name: string): Promise<Supplement>;
+    listSupplements(): Promise<Supplement[]>;
 }
 
 export { ISupplementsRepository, ISupplementsRepositoryDTO }
