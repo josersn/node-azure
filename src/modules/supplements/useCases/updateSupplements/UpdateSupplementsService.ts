@@ -1,6 +1,6 @@
 import { ISupplementsRepository } from "../../repositories/ISupplementsRepository";
 
-class UpdateSupplementsServices {
+class UpdateSupplementsService {
 
     constructor(
         private repository: ISupplementsRepository
@@ -21,4 +21,4 @@ class UpdateSupplementsServices {
     }
 }
 
-export { UpdateSupplementsServices }
+export { UpdateSupplementsService }
