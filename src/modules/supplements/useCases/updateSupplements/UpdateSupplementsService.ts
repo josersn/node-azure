@@ -13,6 +13,9 @@ class UpdateSupplementsService {
             /**
              * not implemented 
              */
+            console.log("Item não existe");
+            return;
+            
         }
 
         await this.repository.updateDeadLine(supplement.id, dead_line);

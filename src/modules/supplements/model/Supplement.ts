@@ -4,12 +4,14 @@ import {
     CreateDateColumn,
     Entity,
     PrimaryColumn,
+    PrimaryGeneratedColumn,
     UpdateDateColumn 
 } from "typeorm";
 
 @Entity("supplements")
 class Supplement {
     @PrimaryColumn()
+    @PrimaryGeneratedColumn('uuid')
     id?: string;
 
     @Column()
