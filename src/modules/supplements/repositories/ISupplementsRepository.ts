@@ -9,6 +9,7 @@ interface ISupplementsRepository {
     listSupplements(): Promise<Supplement[]>;
     find(id: string): Promise<Supplement>;
     updateDeadLine(id: string, dead_line: boolean): Promise<void>;
+    deleteSupplement(id: string): Promise<void>;
 }
 
 export { ISupplementsRepository, ISupplementsRepositoryDTO }
