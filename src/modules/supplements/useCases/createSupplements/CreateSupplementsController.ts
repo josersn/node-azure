@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { container } from "tsyringe";
 import { SupplementsRepository } from "../../repositories/implementations/SupplementsRepository";
 import { CreateSupplementsService } from "./CreateSupplementsService";
 

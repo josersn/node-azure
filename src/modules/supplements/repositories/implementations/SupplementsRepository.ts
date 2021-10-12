@@ -22,10 +22,29 @@ class SupplementsRepository implements ISupplementsRepository {
         return supplement;
     }
 
-    async listSupplements() : Promise<Supplement[]> {
+    async listSupplements(): Promise<Supplement[]> {
         const supplements = this.repository.find();
 
         return supplements;
+    }
+
+    async find(id: string): Promise<Supplement> {
+        const supplement = await this.repository.findOne(id);
+
+        return supplement;
+    }
+
+    async updateDeadLine(id: string, dead_line: boolean): Promise<void> {
+        await this.repository
+            .createQueryBuilder()
+            .update()
+            .set({ dead_line })
+            .where("id = :id")
+            .setParameters({ id })
+            .execute();
+            
+
+            return;
     }
 }
 
