@@ -23,7 +23,7 @@ class SupplementsRepository implements ISupplementsRepository {
     }
 
     async listSupplements(): Promise<Supplement[]> {
-        const supplements = this.repository.find();
+        const supplements = await this.repository.find();
 
         return supplements;
     }
